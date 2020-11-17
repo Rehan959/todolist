@@ -19,5 +19,10 @@ else{
 const getTodo = () => {
   const data =  localStorage.getItem("todoitems");
   todoitems = JSON.parse(data);
+  todoitems.forEach(element => {
+    const liElm = document.createElement("li");
+  liElm.innerHTML = element;
+  ulElm.appendChild(liElm);
+  });
 }
 getTodo();
