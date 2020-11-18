@@ -12,7 +12,7 @@ function addToList() {
     ulElm.appendChild(liElm);
     todoitems.push(text.value);
     localStorage.setItem("todoitems", JSON.stringify(todoitems));
-    text.value = null;
+    text.value = "";
   }
 }
 const getTodo = () => {
