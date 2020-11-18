@@ -1,6 +1,6 @@
 const text = document.querySelector("#text");
 const submit = document.querySelector("#submit");
-var todoitems = [];
+let todoitems = [];
 const ulElm = document.querySelector("ul");
 submit.addEventListener("click", addToList);
 function addToList() {
