@@ -10,6 +10,9 @@ function addToList() {
     const liElm = document.createElement("li");
     liElm.innerHTML = text.value;
     ulElm.appendChild(liElm);
+    if(todoitems === null){
+      todoitems = [];
+    }
     todoitems.push(text.value);
     localStorage.setItem("todoitems", JSON.stringify(todoitems));
     text.value = "";
@@ -18,6 +21,9 @@ function addToList() {
 const getTodo = () => {
   const data = localStorage.getItem("todoitems");
   todoitems = JSON.parse(data);
+  if(todoitems === null){
+    todoitems = [];
+  }
   todoitems.forEach((element) => {
     const liElm = document.createElement("li");
     liElm.innerHTML = element;
