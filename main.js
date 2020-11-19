@@ -1,26 +1,31 @@
+//Garbing the Html into javascript
 const text = document.querySelector("#text");
 const submit = document.querySelector("#submit");
+//making a aray name todoitems to store data
 let todoitems = [];
 const ulElm = document.querySelector("ul");
-const remove = document.querySelector(".remove");
+// adding a eventlister to button name submit
 submit.addEventListener("click", addToList);
+//This is the function for submit button
 function addToList() {
+  //if the text value is null or blank it will run first statement or the else
   if (text.value === "") {
     alert("plese enter a todo something in todolist");
   } else {
     const liElm = document.createElement("li");
-    liElm.innerHTML = `
-    <p><span>${text.value}</span><span><button class="btn btn-danger remove m-1">X</button></span></p>
-    `;
+    liElm.innerHTML = text.value;
     ulElm.appendChild(liElm);
+    //if todot items is null then todoitems is empty or text value will be store in todoitems 
     if (todoitems === null) {
       todoitems = [];
+    } else {
+      todoitems.push(text.value);
+      localStorage.setItem("todoitems", JSON.stringify(todoitems));
+      text.value = "";
     }
-    todoitems.push(text.value);
-    localStorage.setItem("todoitems", JSON.stringify(todoitems));
-    text.value = "";
   }
 }
+// getting the items from todoitems
 const getTodo = () => {
   const data = localStorage.getItem("todoitems");
   todoitems = JSON.parse(data);
@@ -33,4 +38,5 @@ const getTodo = () => {
     ulElm.appendChild(liElm);
   });
 };
+//calling the getTodo function
 getTodo();
