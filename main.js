@@ -2,13 +2,16 @@ const text = document.querySelector("#text");
 const submit = document.querySelector("#submit");
 let todoitems = [];
 const ulElm = document.querySelector("ul");
+const remove = document.querySelector(".remove");
 submit.addEventListener("click", addToList);
 function addToList() {
   if (text.value === "") {
     alert("plese enter a todo something in todolist");
   } else {
     const liElm = document.createElement("li");
-    liElm.innerHTML = text.value;
+    liElm.innerHTML =`
+    <p><span>${text.value}</span><span><button class="btn btn-danger remove m-1">X</button></span></p>
+    `;
     ulElm.appendChild(liElm);
     if(todoitems === null){
       todoitems = [];

@@ -8,13 +8,30 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./style.css" />
     <title>Todo list</title>
   </head>
-  <body>
-    <input type="text" placeholder="add to list" name="" id="text" />
-    <button id="submit">sumbit</button>
-    <h1>Todolist items</h1>
+  <body class="bg-dark">
+    <!-- <input type="text" placeholder="add to list" name="" id="text" /> -->
+
+    <div class="input-group w-25 flex-wrap">
+      <input
+        type="text"
+        id="text"
+        class="form-control m-4 p-1"
+        placeholder="add to todo"
+        aria-label="Username"
+        aria-describedby="addon-wrapping"
+      />
+    </div>
+    <button class="btn btn-primary ml-2" id="submit">sumbit</button>
+    <h1 class="text-white m-5 p-2">Todolist items</h1>
     <ul></ul>
   </body>
   <script src="./main.js"></script>

@@ -2,5 +2,6 @@ body {
   font-family: "Rubik", sans-serif;
 }
 li {
+  color: aliceblue;
   list-style: none;
 } 
