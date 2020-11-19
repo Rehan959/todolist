@@ -9,11 +9,11 @@ function addToList() {
     alert("plese enter a todo something in todolist");
   } else {
     const liElm = document.createElement("li");
-    liElm.innerHTML =`
+    liElm.innerHTML = `
     <p><span>${text.value}</span><span><button class="btn btn-danger remove m-1">X</button></span></p>
     `;
     ulElm.appendChild(liElm);
-    if(todoitems === null){
+    if (todoitems === null) {
       todoitems = [];
     }
     todoitems.push(text.value);
@@ -24,7 +24,7 @@ function addToList() {
 const getTodo = () => {
   const data = localStorage.getItem("todoitems");
   todoitems = JSON.parse(data);
-  if(todoitems === null){
+  if (todoitems === null) {
     todoitems = [];
   }
   todoitems.forEach((element) => {
