@@ -27,6 +27,7 @@ function addToList() {
 }
 // getting the items from todoitems
 const getTodo = () => {
+  //getting the items from local storage
   const data = localStorage.getItem("todoitems");
   todoitems = JSON.parse(data);
   if (todoitems === null) {
