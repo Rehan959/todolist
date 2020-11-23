@@ -1,5 +1,4 @@
 body {
-  display: flex;
   font-family: "Rubik", sans-serif;
 }
 
@@ -9,5 +8,5 @@ li {
 }
 
 #text {
-  width: auto;
+  width:100px;
 }
