@@ -1,11 +1,13 @@
 body {
+  display: flex;
   font-family: "Rubik", sans-serif;
 }
+
 li {
   color: aliceblue;
   list-style: none;
 }
-#submit{
-  width:100px;
-  height:50px;
+
+#text {
+  width: auto;
 }
