@@ -4,7 +4,7 @@ const submit = document.querySelector("#submit");
 //making a aray name todoitems to store data
 let todoitems = [];
 const ulElm = document.querySelector("ul");
-ulElm.addEventListener("click",deleteTodo);
+ulElm.addEventListener("click", deleteTodo);
 // adding a eventlister to button name submit
 submit.addEventListener("click", addToList);
 //This is the function for submit button
@@ -14,10 +14,9 @@ function addToList() {
     alert("plese enter a todo something in todolist");
   } else {
     const liElm = document.createElement("li");
-    liElm.innerHTML =
-    `<p><span>${text.value}</span><i class="fa fa-trash m-2"></i></p>`;
+    liElm.innerHTML = `<p><span>${text.value}</span><i class="fa fa-trash m-2"></i></p>`;
     ulElm.appendChild(liElm);
-    //if todo items is null then todoitems is empty or text value will be store in todoitems 
+    //if todo items is null then todoitems is empty or text value will be store in todoitems
     if (todoitems === null) {
       todoitems = [];
     } else {
@@ -37,27 +36,26 @@ const getTodo = () => {
   }
   todoitems.forEach((element) => {
     const liElm = document.createElement("li");
-    liElm.innerHTML =
-    `<p><span>${element}</span><i class="fa fa-trash m-2"></i></p>`;
+    liElm.innerHTML = `<p><span>${element}</span><i class="fa fa-trash m-2"></i></p>`;
     ulElm.appendChild(liElm);
   });
 };
 //calling the getTodo function
 getTodo();
 
-function deleteTodo (e) {
- const item = e.target;
-if(item.classList[1] === "fa-trash"){
- const value = item.parentElement.childNodes[0].innerHTML;
- const del = item.parentElement.parentElement;
-const todo = JSON.parse(localStorage.getItem("todoitems"));
-const todolist = [];
-todo.forEach((ele) => {
-if(value != ele){
-todolist.push(ele);
+function deleteTodo(e) {
+  const item = e.target;
+  if (item.classList[1] === "fa-trash") {
+    const value = item.parentElement.childNodes[0].innerHTML;
+    const del = item.parentElement.parentElement;
+    const todo = JSON.parse(localStorage.getItem("todoitems"));
+    const todolist = [];
+    todo.forEach((ele) => {
+      if (value != ele) {
+        todolist.push(ele);
+      }
+    });
+    localStorage.setItem("todoitems", JSON.stringify(todolist));
+    del.remove();
+  }
 }
-});
- localStorage.setItem("todoitems",JSON.stringify(todolist));
- del.remove();
-}
- }
