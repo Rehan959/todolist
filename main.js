@@ -37,7 +37,6 @@ const getTodo = () => {
   todoitems.forEach((element) => {
     const liElm = document.createElement("li");
     liElm.innerHTML = `<p><span>${element}</span><i class="fa fa-trash m-2"></i></p>`;
-    ulElm.appendChild(liElm);
   });
 };
 //calling the getTodo function
@@ -58,4 +57,4 @@ function deleteTodo(e) {
     localStorage.setItem("todoitems", JSON.stringify(todolist));
     del.remove();
   }
-}
+} 
