@@ -34,9 +34,9 @@ const getTodo = () => {
   if (todoitems === null) {
     todoitems = [];
   }
-  todoitems.forEach((element) => {
+  todoitems.forEach((Element) => {
     const liElm = document.createElement("li");
-    liElm.innerHTML = `<p><span>${element}</span><i class="fa fa-trash m-2"></i></p>`;
+    liElm.innerHTML = `<p><span>${Element}</span><i class="fa fa-trash m-2"></i></p>`;
   });
 };
 //calling the getTodo function
