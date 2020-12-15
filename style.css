@@ -18,14 +18,14 @@ div {
 }
 
 div > button {
-  width: auto;
+  width:60px;
   height: 60px;
   margin: 15px;
 }
 
 #text {
-  width: 20vw;
-  height: 50px;
+  width: 25vw;
+  height: 55px;
 }
 
 h1{
