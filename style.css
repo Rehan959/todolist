@@ -10,3 +10,31 @@ li {
 #text {
   width: 100px;
 }
+
+div {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+div > button {
+  width: auto;
+  height: 60px;
+  margin: 15px;
+}
+
+#text {
+  width: 20vw;
+  height: 50px;
+}
+
+h1{
+  text-align: center;
+}
+
+ul{
+ text-align: center; 
+}
+li{
+  font-size:40px;
+}

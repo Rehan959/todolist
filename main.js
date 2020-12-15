@@ -55,6 +55,6 @@ function deleteTodo(e) {
       }
     });
     localStorage.setItem("todoitems", JSON.stringify(todolist));
-    del.remove();
+    del.remove();                                 
   }
-} 
+}                                      
