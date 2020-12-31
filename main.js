@@ -26,7 +26,7 @@ function addToList() {
     }
   }
 }
-// getting the items from todoitems
+// getting the items from inputbox
 const getTodo = () => {
   //getting the items from local storage
   const data = localStorage.getItem("todoitems");
@@ -34,9 +34,9 @@ const getTodo = () => {
   if (todoitems === null) {
     todoitems = [];
   }
-  todoitems.forEach((Element) => {
+  todoitems.forEach((Ele) => {
     const liElm = document.createElement("li");
-    liElm.innerHTML = `<p><span>${Element}</span><i class="fa fa-trash m-2"></i></p>`;
+    liElm.innerHTML = `<p><span>${Ele}</span><i class="fa fa-trash m-2"></i></p>`;
   });
 };
 //calling the getTodo function
