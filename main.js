@@ -16,7 +16,7 @@ function addToList() {
     const liElm = document.createElement("li");
     liElm.innerHTML = `<p><span>${text.value}</span><i class="fa fa-trash m-2"></i></p>`;
     ulElm.appendChild(liElm);
-    //if todo items is null then todoitems is empty or text value will be store in todoitems
+    //if todo items is blank then todoitems is empty or text value will be store in todoitems
     if (todoitems === null) {
       todoitems = [];
     } else {
